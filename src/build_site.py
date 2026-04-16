@@ -26,7 +26,7 @@ from pathlib import Path
 from .digest import SEGMENT_LABELS
 
 SITE_DIR = Path("site")
-DOMAIN = "https://planradar.ie"
+DOMAIN = "https://buildleads.ie"
 
 SEGMENT_BLURBS = {
     "roofing": {
