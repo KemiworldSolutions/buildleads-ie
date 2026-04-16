@@ -1,0 +1,4 @@
+email,segment,stripe_customer_id,joined,status
+john@example-roofing.ie,roofing,cus_EXAMPLE1,2026-04-14,active
+info@example-solar.ie,solar_pv,cus_EXAMPLE2,2026-04-15,active
+hello@example-structural.ie,structural_engineering,cus_EXAMPLE3,2026-04-16,active

@@ -1,0 +1,30 @@
+# Secrets — never commit
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+*.egg
+
+# Output artefacts (not part of the deployable site)
+out/
+
+# Personal/business contact data — never public
+buyers/*.csv
+subscribers/active.csv
+subscribers/*.csv
+!subscribers/active.csv.example
+
+# Local Claude Code settings
+.claude/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
