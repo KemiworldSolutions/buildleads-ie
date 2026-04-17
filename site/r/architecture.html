@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dublin Architecture leads — weekly planning applications | PlanRadar.ie</title>
+<title>Dublin Architecture leads — weekly planning applications | BuildLeads.ie</title>
 <meta name="description" content="Every Dublin architecture-relevant planning application from the four Dublin councils, in your inbox every Monday. €29/month, cancel anytime.">
-<link rel="canonical" href="https://planradar.ie/r/architecture.html">
-<meta property="og:title" content="Dublin Architecture leads — weekly planning applications | PlanRadar.ie">
+<link rel="canonical" href="https://buildleads.ie/r/architecture.html">
+<meta property="og:title" content="Dublin Architecture leads — weekly planning applications | BuildLeads.ie">
 <meta property="og:description" content="Every Dublin architecture-relevant planning application from the four Dublin councils, in your inbox every Monday. €29/month, cancel anytime.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://planradar.ie/r/architecture.html">
+<meta property="og:url" content="https://buildleads.ie/r/architecture.html">
 <style>
 *{box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:720px;margin:0 auto;padding:2rem 1.25rem;background:#fafaf7}
@@ -24,8 +24,10 @@ a{color:#0a5fae}
 .three{display:grid;grid-template-columns:1fr;gap:1rem;margin:2rem 0}
 @media(min-width:640px){.three{grid-template-columns:1fr 1fr 1fr}}
 .card{background:#fff;border:1px solid #e5e3da;border-radius:8px;padding:1rem}
-nav{font-size:.9rem;margin-bottom:1.5rem}
-nav a{margin-right:1rem}
+nav{font-size:.9rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem}
+.nav-logo{font-weight:700;font-size:1rem;color:#1a1a1a;text-decoration:none;flex:0 0 100%}
+.nav-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem}
+@media(min-width:768px){.nav-logo{flex:0 0 auto}}
 footer{margin-top:4rem;padding-top:2rem;border-top:1px solid #e5e3da;font-size:.85rem;color:#666}
 .faq dt{font-weight:600;margin-top:1rem}
 </style>
@@ -33,22 +35,22 @@ footer{margin-top:4rem;padding-top:2rem;border-top:1px solid #e5e3da;font-size:.
 {
   "@context":"https://schema.org",
   "@type":"Service",
-  "name":"PlanRadar.ie",
+  "name":"BuildLeads.ie",
   "areaServed":{"@type":"City","name":"Dublin"},
-  "provider":{"@type":"Organization","name":"PlanRadar.ie"},
+  "provider":{"@type":"Organization","name":"BuildLeads.ie"},
   "description":"Every Dublin architecture-relevant planning application from the four Dublin councils, in your inbox every Monday. €29/month, cancel anytime.",
   "offers":{"@type":"Offer","price":"29","priceCurrency":"EUR"}
 }
 </script>
 </head>
 <body>
-<nav><a href="/">Home</a> <a href="/r/roofing.html">Roofing</a> <a href="/r/solar_pv.html">Solar PV</a> <a href="/r/structural_engineering.html">Structural</a> <a href="/r/architecture.html">Architecture</a></nav>
+<nav><a class="nav-logo" href="/">BuildLeads.ie</a><div class="nav-links"><a href="/r/roofing.html">Roofing</a><a href="/r/solar_pv.html">Solar PV</a><a href="/r/structural_engineering.html">Structural</a><a href="/r/architecture.html">Architecture</a><a href="/blog/">Blog</a></div></nav>
 
 <h1>Sub-work for small Dublin practices, every Monday morning.</h1>
-<p>If you're a small Dublin practice taking on overflow design or technician work, PlanRadar tells you which other Dublin architects just filed substantial applications and which projects have no agent listed at all.</p>
+<p>If you're a small Dublin practice taking on overflow design or technician work, BuildLeads tells you which other Dublin architects just filed substantial applications and which projects have no agent listed at all.</p>
 <p class="price">€29 / month — cancel anytime</p>
 <a class="cta" href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK">Subscribe — Architecture digest</a>
-<p>Or email <a href="mailto:sample@planradar.ie?subject=Sample Architecture">sample@planradar.ie</a> for last week's free.</p>
+<p>Or email <a href="mailto:hello@buildleads.ie?subject=Sample Architecture">hello@buildleads.ie</a> for last week's free.</p>
 
 <h2>What you get every Monday</h2>
 <ul>
@@ -60,7 +62,7 @@ footer{margin-top:4rem;padding-top:2rem;border-top:1px solid #e5e3da;font-size:.
 
 <h2>How it works</h2>
 <ol>
-<li>Every Monday at 6am, PlanRadar fetches the public weekly planning lists from the four Dublin councils.</li>
+<li>Every Monday at 6am, BuildLeads fetches the public weekly planning lists from the four Dublin councils.</li>
 <li>An LLM extraction step (DeepSeek) classifies each application by which trades it's relevant to.</li>
 <li>By 7am you have an email with only the architecture jobs.</li>
 </ol>
@@ -68,15 +70,15 @@ footer{margin-top:4rem;padding-top:2rem;border-top:1px solid #e5e3da;font-size:.
 <h2>FAQ</h2>
 <dl class="faq">
 <dt>Is this a "leads list" of homeowners?</dt>
-<dd>No. PlanRadar is the underlying public planning record — applicant name, site address, the description as published. We do not enrich with phone or personal email. You make first contact yourself, professionally, with full context about what they're planning.</dd>
+<dd>No. BuildLeads is the underlying public planning record — applicant name, site address, the description as published. We do not enrich with phone or personal email. You make first contact yourself, professionally, with full context about what they're planning.</dd>
 <dt>How is this legal?</dt>
-<dd>Planning applications are public record under the Planning and Development Act 2000 (as amended). The councils publish the same data themselves on their own websites. PlanRadar's value is filtering and delivery, not access.</dd>
+<dd>Planning applications are public record under the Planning and Development Act 2000 (as amended). The councils publish the same data themselves on their own websites. BuildLeads's value is filtering and delivery, not access.</dd>
 <dt>Can I cancel?</dt>
 <dd>Yes, one click in the Stripe portal. No contract, no minimum term.</dd>
 </dl>
 
 <footer>
-PlanRadar.ie — Dublin planning leads for trades and professionals. Data sourced from the public weekly planning lists of Dublin City Council, Fingal County Council, Dún Laoghaire-Rathdown County Council and South Dublin County Council, as required to be published under the Planning and Development Regulations 2001 (as amended).
+BuildLeads.ie — Dublin planning leads for trades and professionals. Data sourced from the public weekly planning lists of Dublin City Council, Fingal County Council, Dún Laoghaire-Rathdown County Council and South Dublin County Council, as required to be published under the Planning and Development Regulations 2001 (as amended).
 </footer>
 </body>
 </html>
