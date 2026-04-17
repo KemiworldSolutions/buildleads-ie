@@ -11,74 +11,153 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://buildleads.ie/r/scaffolding.html">
 <style>
-*{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:720px;margin:0 auto;padding:2rem 1.25rem;background:#fafaf7}
-h1{font-size:2rem;line-height:1.2;margin:1rem 0 .5rem}
-h2{font-size:1.4rem;margin-top:2.5rem}
-h3{font-size:1.1rem;margin-top:1.5rem}
-p{margin:.75rem 0}
-a{color:#0a5fae}
-.cta{display:inline-block;background:#0a5fae;color:#fff;padding:.85rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:600;margin:1rem 0}
-.cta:hover{background:#084a87}
-.price{font-size:1.6rem;font-weight:700;color:#0a5fae}
-.three{display:grid;grid-template-columns:1fr;gap:1rem;margin:2rem 0}
-@media(min-width:640px){.three{grid-template-columns:1fr 1fr 1fr}}
-.card{background:#fff;border:1px solid #e5e3da;border-radius:8px;padding:1rem}
-nav{font-size:.9rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem}
-.nav-logo{font-weight:700;font-size:1rem;color:#1a1a1a;text-decoration:none;flex:0 0 100%}
-.nav-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem}
-@media(min-width:768px){.nav-logo{flex:0 0 auto}}
-footer{margin-top:4rem;padding-top:2rem;border-top:1px solid #e5e3da;font-size:.85rem;color:#666}
-.faq dt{font-weight:600;margin-top:1rem}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f172a;
+  --surface:#1e293b;
+  --border:#334155;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --accent:#38bdf8;
+  --cta:#6366f1;
+  --cta-hover:#4f46e5;
+}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;padding:.75rem 0}
+.nav-logo{font-weight:700;font-size:1.1rem;color:var(--accent);text-decoration:none;flex:0 0 100%}
+.nav-links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font-size:.9rem}
+.nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--text);text-decoration:none}
+@media(min-width:768px){
+  .nav-inner{flex-wrap:nowrap;justify-content:space-between;height:60px;padding:0}
+  .nav-logo{flex:0 0 auto}
+}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);padding:5rem 1.5rem 4rem;text-align:center}
+.hero-inner{max-width:800px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,5vw,3.25rem);font-weight:700;line-height:1.15;margin-bottom:1.25rem;color:#fff}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:620px;margin:0 auto 1.5rem}
+.hero .price{font-size:1.75rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem}
+.cta{display:inline-block;background:var(--cta);color:#fff;padding:.875rem 2rem;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:background .2s}
+.cta:hover{background:var(--cta-hover);text-decoration:none}
+.cta-note{display:block;margin-top:.75rem;color:var(--muted);font-size:.9rem}
+.section{padding:4rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{font-size:1.6rem;font-weight:700;margin-bottom:1.75rem;color:var(--text)}
+.cards{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.cards-3{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--accent)}
+.card p{color:var(--muted);font-size:.95rem}
+.trades{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.875rem;list-style:none}
+.trades a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem;color:var(--text);font-weight:500;font-size:.95rem;transition:border-color .2s}
+.trades a:hover{border-color:var(--accent);text-decoration:none}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media(min-width:640px){.blog-grid{grid-template-columns:1fr 1fr 1fr}}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column}
+.blog-card time{font-size:.8rem;color:var(--muted);margin-bottom:.5rem;display:block}
+.blog-card h3{font-size:1rem;font-weight:600;margin-bottom:.5rem}
+.blog-card h3 a{color:var(--text)}
+.blog-card h3 a:hover{color:var(--accent)}
+.blog-card p{color:var(--muted);font-size:.9rem;flex:1}
+.faq{display:flex;flex-direction:column;gap:1.25rem}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem}
+.faq-item dt{font-weight:600;color:var(--text);margin-bottom:.4rem}
+.faq-item dd{color:var(--muted);font-size:.95rem}
+.how-steps{display:flex;flex-direction:column;gap:1rem;list-style:none;counter-reset:step}
+.how-steps li{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1rem 1rem 3.5rem;position:relative;color:var(--muted);font-size:.95rem;counter-increment:step}
+.how-steps li::before{content:counter(step);position:absolute;left:1rem;top:1rem;font-weight:700;color:var(--accent);font-size:1.1rem}
+footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem 1.5rem;margin-top:2rem}
+.footer-inner{max-width:1100px;margin:0 auto;font-size:.85rem;color:var(--muted)}
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DETYX5K1YP"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-DETYX5K1YP');
+</script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Service",
   "name":"BuildLeads.ie",
   "areaServed":{"@type":"City","name":"Dublin"},
-  "provider":{"@type":"Organization","name":"BuildLeads.ie"},
+  "provider":{"@type":"Organization","name":"BuildLeads.ie","url":"https://buildleads.ie"},
   "description":"Every Dublin scaffolding-relevant planning application from the four Dublin councils, in your inbox every Monday. €29/month, cancel anytime.",
   "offers":{"@type":"Offer","price":"29","priceCurrency":"EUR"}
 }
 </script>
 </head>
 <body>
-<nav><a class="nav-logo" href="/">BuildLeads.ie</a><div class="nav-links"><a href="/r/roofing.html">Roofing</a><a href="/r/solar_pv.html">Solar PV</a><a href="/r/structural_engineering.html">Structural</a><a href="/r/architecture.html">Architecture</a><a href="/blog/">Blog</a></div></nav>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">BuildLeads.ie</a>
+    <div class="nav-links">
+      <a href="/r/roofing.html">Roofing</a>
+      <a href="/r/solar_pv.html">Solar PV</a>
+      <a href="/r/structural_engineering.html">Structural</a>
+      <a href="/r/architecture.html">Architecture</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </div>
+</nav>
 
-<h1>Every Dublin job that's about to need scaffolding.</h1>
-<p>Two-storey extension? Re-roof? Render job? Scaffolding required. BuildLeads tells you who and where, before the main contractor is even appointed.</p>
-<p class="price">€29 / month — cancel anytime</p>
-<a class="cta" href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK">Subscribe — Scaffolding digest</a>
-<p>Or email <a href="mailto:hello@buildleads.ie?subject=Sample Scaffolding">hello@buildleads.ie</a> for last week's free.</p>
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Every Dublin job that's about to need scaffolding.</h1>
+    <p>Two-storey extension? Re-roof? Render job? Scaffolding required. BuildLeads.ie tells you who and where, before the main contractor is even appointed.</p>
+    <p class="price">€29 / month — cancel anytime</p>
+    <a class="cta" href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK">Subscribe — Scaffolding digest</a>
+    <span class="cta-note">or <a href="mailto:hello@buildleads.ie?subject=Sample Scaffolding">email for a free sample</a></span>
+  </div>
+</div>
 
-<h2>What you get every Monday</h2>
-<ul>
-<li>Every scaffolding-relevant Dublin planning application from the previous 7 days</li>
-<li>Site address, applicant name, agent (if listed), and a structured description</li>
-<li>All four Dublin councils: DCC, Fingal, DLR, SDCC</li>
-<li>Delivered as a clean PDF + a CSV you can import into your CRM</li>
-</ul>
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">What you get every Monday</h2>
+    <div class="cards cards-3">
+      <div class="card"><h3>Every Scaffolding application</h3><p>Every scaffolding-relevant Dublin planning application from the previous 7 days.</p></div>
+      <div class="card"><h3>Full application detail</h3><p>Site address, applicant name, agent (if listed), and a structured description of the work.</p></div>
+      <div class="card"><h3>All four Dublin councils</h3><p>DCC, Fingal, Dún Laoghaire-Rathdown, and South Dublin — all in one email.</p></div>
+    </div>
+  </div>
+</section>
 
-<h2>How it works</h2>
-<ol>
-<li>Every Monday at 6am, BuildLeads fetches the public weekly planning lists from the four Dublin councils.</li>
-<li>An LLM extraction step (DeepSeek) classifies each application by which trades it's relevant to.</li>
-<li>By 7am you have an email with only the scaffolding jobs.</li>
-</ol>
+<section class="section" style="padding-top:0">
+  <div class="section-inner">
+    <h2 class="section-title">How it works</h2>
+    <ol class="how-steps">
+      <li>Every Monday at 6am, BuildLeads.ie fetches the public weekly planning lists from the four Dublin councils.</li>
+      <li>An AI extraction step classifies each application by which trades it's relevant to.</li>
+      <li>By 7am you have an email with only the scaffolding jobs.</li>
+    </ol>
+  </div>
+</section>
 
-<h2>FAQ</h2>
-<dl class="faq">
-<dt>Is this a "leads list" of homeowners?</dt>
-<dd>No. BuildLeads is the underlying public planning record — applicant name, site address, the description as published. We do not enrich with phone or personal email. You make first contact yourself, professionally, with full context about what they're planning.</dd>
-<dt>How is this legal?</dt>
-<dd>Planning applications are public record under the Planning and Development Act 2000 (as amended). The councils publish the same data themselves on their own websites. BuildLeads's value is filtering and delivery, not access.</dd>
-<dt>Can I cancel?</dt>
-<dd>Yes, one click in the Stripe portal. No contract, no minimum term.</dd>
-</dl>
+<section class="section" style="padding-top:0">
+  <div class="section-inner">
+    <h2 class="section-title">FAQ</h2>
+    <dl class="faq">
+      <div class="faq-item"><dt>Is this a "leads list" of homeowners?</dt><dd>No. BuildLeads.ie is the underlying public planning record — applicant name, site address, the description as published. We do not enrich with phone or personal email. You make first contact yourself, professionally, with full context about what they're planning.</dd></div>
+      <div class="faq-item"><dt>How is this legal?</dt><dd>Planning applications are public record under the Planning and Development Act 2000 (as amended). The councils publish the same data themselves on their own websites. BuildLeads.ie's value is filtering and delivery, not access.</dd></div>
+      <div class="faq-item"><dt>Can I cancel?</dt><dd>Yes, one click in the Stripe portal. No contract, no minimum term.</dd></div>
+    </dl>
+  </div>
+</section>
 
 <footer>
-BuildLeads.ie — Dublin planning leads for trades and professionals. Data sourced from the public weekly planning lists of Dublin City Council, Fingal County Council, Dún Laoghaire-Rathdown County Council and South Dublin County Council, as required to be published under the Planning and Development Regulations 2001 (as amended).
+  <div class="footer-inner">
+    <strong style="color:var(--text)">BuildLeads.ie</strong> — Dublin planning leads for trades and professionals.<br>
+    Data sourced from the public weekly planning lists of Dublin City Council, Fingal County Council,
+    Dún Laoghaire-Rathdown County Council and South Dublin County Council, as required to be published
+    under the Planning and Development Regulations 2001 (as amended).
+  </div>
 </footer>
 </body>
 </html>
