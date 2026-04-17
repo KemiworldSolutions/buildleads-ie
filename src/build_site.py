@@ -106,6 +106,8 @@ def _page(title: str, description: str, body: str, canonical: str) -> str:
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
 <style>{BASE_CSS}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JG4WFZX6J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-3JG4WFZX6J');</script>
 <script type="application/ld+json">
 {{
   "@context":"https://schema.org",
