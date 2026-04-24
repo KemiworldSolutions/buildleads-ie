@@ -1,5 +1,6 @@
 # Secrets — never commit
 .env
+deploy/vps_env.ps1
 
 # Python
 __pycache__/
